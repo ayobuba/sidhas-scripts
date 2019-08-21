@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-MYSQL_PWD=""      
+MYSQL_PWD=       
 MONGODB_PWD="MEvWs2YZOyFyfCofsRj6DM6IjFwGQxFqxm4"    
 
-S3_BUCKET="pictda"  
+S3_BUCKET="fhi-files"  
 
 BACKUPS_DIRECTORY="/home/ubuntu/backups/"
 WORKING_DIRECTORY="/home/ubuntu/backup-tmp/"
