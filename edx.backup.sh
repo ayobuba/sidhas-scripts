@@ -1,27 +1,10 @@
 #!/bin/bash
-#---------------------------------------------------------
-# written by: lawrence mcdaniel
-#             https://lawrencemcdaniel.com
-#             https://blog.lawrencemcdaniel.com
-#
-# date:       feb-2018
-#
-# usage:      backup MySQL and MongoDB data stores
-#             combine into a single tarball, store in "backups" folders in user directory
-#
-# reference:  https://github.com/edx/edx-documentation/blob/master/en_us/install_operations/source/platform_releases/ginkgo.rst
-#---------------------------------------------------------
 
-#------------------------------ SUPER IMPORTANT!!!!!!!! -- initialize these variables
-MYSQL_PWD=""      #Add your MySQL admin password, if one is set. Otherwise set to a null string
-MONGODB_PWD="MEvWs2YZOyFyfCofsRj6DM6IjFwGQxFqxm4"    #Add your MongoDB admin password from your my-passwords.yml file in the ubuntu home folder.
 
-S3_BUCKET="pictda"  #For this script to work you'll first need the following:
-                                            # - create an AWS S3 Bucket
-                                            # - create an AWS IAM user with programatic access and S3 Full Access privileges
-                                            # - install AWS Command Line Tools in your Ubuntu EC2 instance
-                                            # run aws configure to add your IAM key and secret token
-#------------------------------------------------------------------------------------------------------------------------
+MYSQL_PWD=""      
+MONGODB_PWD="MEvWs2YZOyFyfCofsRj6DM6IjFwGQxFqxm4"    
+
+S3_BUCKET="pictda"  
 
 BACKUPS_DIRECTORY="/home/ubuntu/backups/"
 WORKING_DIRECTORY="/home/ubuntu/backup-tmp/"
