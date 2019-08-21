@@ -72,5 +72,5 @@ echo "Cleaning up"
 sudo rm -r ${WORKING_DIRECTORY}
 
 echo "Sync backup to AWS S3 backup folder"
-/usr/local/bin/aws s3 sync ${BACKUPS_DIRECTORY} s3://${S3_BUCKET}
+/usr/bin/aws s3 sync ${BACKUPS_DIRECTORY} s3://${S3_BUCKET}
 echo "Done!"
