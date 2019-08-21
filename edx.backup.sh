@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-MYSQL_PWD=       
+     
 MONGODB_PWD="MEvWs2YZOyFyfCofsRj6DM6IjFwGQxFqxm4"    
 
 S3_BUCKET="fhi-files"  
@@ -31,7 +31,7 @@ fi
 cd ${WORKING_DIRECTORY}
 
 #Backup MySQL databases
-MYSQL_CONN="-uroot -p'{$MYSQL_PWD}'"
+MYSQL_CONN="-uroot "
 echo "Backing up MySQL databases"
 echo "Reading MySQL database names..."
 mysql ${MYSQL_CONN} -ANe "SELECT schema_name FROM information_schema.schemata WHERE schema_name NOT IN ('mysql','sys','information_schema','performance_schema')" > /tmp/db.txt
